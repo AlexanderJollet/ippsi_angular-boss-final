@@ -4,3 +4,9 @@ body {
     background: rgb(117, 119, 121);
     font-family: 'Open Sans', sans-serif;
 }
+
+.dark {
+    position: relative;
+    width: 50%;
+    margin-left: 25%;
+}
