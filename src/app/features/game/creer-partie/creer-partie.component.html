@@ -1,0 +1,30 @@
+<h3>
+    Nouvelle partie
+</h3>
+<label>Choisissez un combattant</label>
+<select>
+    <option *ngFor="let combattant of combattants" [(ngModel)]="combattant.nom">
+        {{ combattant.nom }}
+    </option>
+</select><br>
+<label>Choisissez votre mise</label>
+<input
+      placeholder="Votre mise"
+      id="idMise"
+      type="number"
+      class="validate"
+      name="argent"
+      [(ngModel)]="Player1.argent"
+    >
+    <button (click)="miser()" class="btn waves-effect waves-light" (click)="miser()" type="button" >
+        Miser
+        <i class="material-icons right">send</i>
+      </button><br><br>
+    <button *ngIf="afficherButton" class="btn waves-effect waves-light" (click)="continuerPartie()" type="button" >
+        Continuer
+        <i class="material-icons right">send</i>
+      </button><br><br>
+      <button *ngIf="afficherButton" class="btn waves-effect waves-light" (click)="arreterPartie()" type="button" >
+        Arreter la partie
+        <i class="material-icons right">send</i>
+      </button>

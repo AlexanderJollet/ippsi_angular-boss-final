@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { CreerPartieComponent } from "./features/creer-partie/creer-partie.component";
+import { CreerPartieComponent } from "./features/game/creer-partie/creer-partie.component";
 import { HomeComponent } from "./features/global/home/home.component";
 import { AjouterArmeComponent } from "./features/weapons/ajouter-arme/ajouter-arme.component";
 import { ListArmesComponent } from "./features/weapons/list-armes/list-armes.component";

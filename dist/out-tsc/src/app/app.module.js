@@ -1,6 +1,6 @@
+import { __decorate } from "tslib";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { MenuPrincipalComponent } from './shared/components/menu-principal/menu-principal.component';
 import { ChoixArmePrincipaleComponent } from './features/weapons/choix-arme-principale/choix-arme-principale.component';
@@ -12,27 +12,31 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { HomeComponent } from './features/global/home/home.component';
 import { ListArmesComponent } from './features/weapons/list-armes/list-armes.component';
-import { CreerPartieComponent } from './features/game/creer-partie/creer-partie.component';
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    MenuPrincipalComponent,
-    ChoixArmePrincipaleComponent,
-    PreparerPlayerComponent,
-    AjouterArmeComponent,
-    PageNotFoundComponent,
-    HomeComponent,
-    ListArmesComponent,
-    CreerPartieComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    AppRoutingModule,
-  ],
-  providers: [], // pour les services sans injectable à root
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+import { CreerPartieComponent } from './features/creer-partie/creer-partie.component';
+let AppModule = class AppModule {
+};
+AppModule = __decorate([
+    NgModule({
+        declarations: [
+            AppComponent,
+            MenuPrincipalComponent,
+            ChoixArmePrincipaleComponent,
+            PreparerPlayerComponent,
+            AjouterArmeComponent,
+            PageNotFoundComponent,
+            HomeComponent,
+            ListArmesComponent,
+            CreerPartieComponent
+        ],
+        imports: [
+            BrowserModule,
+            FormsModule,
+            HttpClientModule,
+            AppRoutingModule
+        ],
+        providers: [],
+        bootstrap: [AppComponent]
+    })
+], AppModule);
+export { AppModule };
+//# sourceMappingURL=app.module.js.map
