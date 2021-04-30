@@ -1,0 +1,37 @@
+<p>list-party works!</p>
+<img class='jabba' width="300" src="assets/img/Jabba_le_Hutt.webp">
+
+
+
+
+<table class="highlight" *ngIf="parties && parties.length > 0">
+  <tr>
+    <th>Id</th>
+    <th>Date</th>
+    <th>duration</th>
+    <th>nombre de tours</th>
+    <th>gain initial</th>
+    <th>gain final</th>
+
+  </tr>
+  <tr *ngFor="let partie of parties">
+    <td>
+      {{ partie.id }}
+    </td>
+    <td>
+      {{ partie.date }}
+    </td>
+    <td>
+      {{ partie.duration }}
+    </td>
+    <td>
+    {{ partie.nbTurns }}
+    </td>
+    <td>
+    {{ partie.gainBefore }}
+    </td>
+    <td>
+    {{ partie.gainAfter }}
+    </td>
+  </tr>
+</table>
