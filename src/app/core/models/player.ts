@@ -3,5 +3,5 @@
  */
 export class Player {
   prenom: string;
-  nom: string;
+  argent: number=100;
 }
