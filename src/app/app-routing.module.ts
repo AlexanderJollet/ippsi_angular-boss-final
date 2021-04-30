@@ -6,7 +6,16 @@ import { AjouterArmeComponent } from "./features/weapons/ajouter-arme/ajouter-ar
 import { ListArmesComponent } from "./features/weapons/list-armes/list-armes.component";
 import { PageNotFoundComponent } from "./shared/components/page-not-found/page-not-found.component";
 
+
+import { ConnexionComponent } from './connexion/connexion.component';
+import { AdminComponent } from './admin/admin.component';
+import { AuthGuard } from './auth.guard';
+
+
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'connexion'},
+  { path: 'connexion', component: ConnexionComponent },
+  { path: 'admin', component: AdminComponent },
   {
     path: '',
     component: HomeComponent
@@ -23,11 +32,14 @@ const routes: Routes = [
     path: 'nouvelle-partie',
     component: CreerPartieComponent
   },
-  { path: '**', component: PageNotFoundComponent },
+  { path: '**', component: PageNotFoundComponent }
+
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

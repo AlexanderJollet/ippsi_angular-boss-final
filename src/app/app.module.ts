@@ -7,16 +7,22 @@ import { ChoixArmePrincipaleComponent } from './features/weapons/choix-arme-prin
 import { PreparerPlayerComponent } from './features/players/preparer-player/preparer-player.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
+
 import { AjouterArmeComponent } from './features/weapons/ajouter-arme/ajouter-arme.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { HomeComponent } from './features/global/home/home.component';
 import { ListArmesComponent } from './features/weapons/list-armes/list-armes.component';
 import { CreerPartieComponent } from './features/creer-partie/creer-partie.component';
+import { AdminComponent } from './admin/admin.component';
+import { ConnexionComponent } from './connexion/connexion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AdminComponent,
+    ConnexionComponent,
     MenuPrincipalComponent,
     ChoixArmePrincipaleComponent,
     PreparerPlayerComponent,
@@ -30,6 +36,7 @@ import { CreerPartieComponent } from './features/creer-partie/creer-partie.compo
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [], // pour les services sans injectable à root
