@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Player } from '../../core/models/player';
+import { Combattant } from '../../core/models/combattant';
+import { CombattantService } from '../../shared/services/combattant.service'
 
 @Component({
   selector: 'app-creer-partie',
@@ -6,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./creer-partie.component.css']
 })
 export class CreerPartieComponent implements OnInit {
-
-  constructor() { }
+  Player1 = new Player();
+  combattants: Combattant[] = [];
+  constructor(private combattantService: CombattantService) { }
 
   ngOnInit(): void {
+    this.combattants = this.combattantService.getAll();
   }
-
 }

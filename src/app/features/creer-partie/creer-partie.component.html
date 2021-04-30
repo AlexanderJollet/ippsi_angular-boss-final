@@ -1,1 +1,18 @@
-<p>creer-partie works!</p>
+<h3>
+    Nouvelle partie
+</h3>
+<label>Choisissez un combattant</label>
+<select>
+    <option *ngFor="let combattant of combattants" value="combattant.nom">
+        {{ combattant.nom }}
+    </option>
+</select><br>
+<label>Choisissez votre mise</label>
+<input
+      placeholder="Votre mise"
+      id="idMise"
+      type="number"
+      class="validate"
+      name="argent"
+      [(ngModel)]="Player1.argent"
+    >
