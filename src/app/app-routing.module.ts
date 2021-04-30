@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { CreerPartieComponent } from "./features/creer-partie/creer-partie.component";
+import { ListPartyComponent } from "./features/game/list-party/list-party/list-party.component";
 import { HomeComponent } from "./features/global/home/home.component";
 import { AjouterArmeComponent } from "./features/weapons/ajouter-arme/ajouter-arme.component";
 import { ListArmesComponent } from "./features/weapons/list-armes/list-armes.component";
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'nouvelle-partie',
     component: CreerPartieComponent
+  },
+  {
+    path: 'liste-partie',
+    component: ListPartyComponent
   },
   { path: '**', component: PageNotFoundComponent },
 ];

@@ -7,9 +7,13 @@ export const environment = {
   apis: {
     armes: {
       url: 'https://6f6c12ee-710e-49bb-88c5-2206f1ca7f0b.mock.pstmn.io/api/arme'
+    },
+    parties : {
+      url: 'https://f8e61248-dbef-43b9-9fb4-853f8dc5da81.mock.pstmn.io/api/v2/user/1/games'
     }
   }
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

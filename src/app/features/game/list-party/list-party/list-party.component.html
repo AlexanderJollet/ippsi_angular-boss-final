@@ -3,7 +3,6 @@
 
 
 
-
 <table class="highlight" *ngIf="parties && parties.length > 0">
   <tr>
     <th>Id</th>
@@ -14,7 +13,7 @@
     <th>gain final</th>
 
   </tr>
-  <tr *ngFor="let partie of parties">
+  <tr *ngFor= "let partie of parties" >
     <td>
       {{ partie.id }}
     </td>
@@ -25,13 +24,13 @@
       {{ partie.duration }}
     </td>
     <td>
-    {{ partie.nbTurns }}
+      {{ partie.nbTurns }}
     </td>
     <td>
-    {{ partie.gainBefore }}
+      {{ partie.gainBefore }}
     </td>
     <td>
-    {{ partie.gainAfter }}
+      {{ partie.gainAfter }}
     </td>
   </tr>
 </table>
